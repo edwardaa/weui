@@ -18,10 +18,12 @@
 
 .weui-tabbar {
     display: flex;
-    position: absolute;
+    // edward: change position to relative to ensure :after (absolute) work
+    position: relative;
     z-index: 500;
-    bottom: 0;
-    width: 100%;
+    // edward: comment out bottom and width
+    // bottom: 0;
+    // width: 100%;
     background-color: #F7F7FA;
     // edward
     &:after {
