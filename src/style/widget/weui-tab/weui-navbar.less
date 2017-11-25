@@ -18,19 +18,21 @@
 
 .weui-navbar {
     display: flex;
-    // edward: change position to relative to ensure :after (absolute) work
-    position: relative;
+    // edward: change position from absolute to fixed
+    position: fixed;
     z-index: 500;
-    // edward: comment out top and width
-    // top: 0;
-    // width: 100%;
-    background-color: #FAFAFA;
+    top: 0;
+    width: 100%;
+    // edward: add justify-content;
+    justify-content: space-around;
+    // edward: change color form #F7F7FA to #FFF
+    background-color: #FFF;
 
     &:after {
         .setBottomLine(#CCCCCC);
     }
-
-    & + .weui-tab__panel {
+    // edwaerd: change .weui-tab__panel to .weui-content__panel
+    & + .weui-content__panel {
         padding-top: 50px;
         padding-bottom: 0;
     }

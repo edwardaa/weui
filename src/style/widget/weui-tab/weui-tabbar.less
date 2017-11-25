@@ -18,14 +18,13 @@
 
 .weui-tabbar {
     display: flex;
-    // edward: change position to relative to ensure :after (absolute) work
-    position: relative;
+    // edward: change position from absolute to fixed to ensure :after (absolute) work
+    position: fixed;
     z-index: 500;
-    // edward: comment out bottom and width
-    // bottom: 0;
-    // width: 100%;
+    bottom: 0;
+    width: 100%;
     background-color: #F7F7FA;
-    // edward
+    // edward: change :before to :after
     &:after {
         .setTopLine(#C0BFC4);
     }
@@ -70,6 +69,7 @@
 .weui-tabbar__label {
     text-align: center;
     color: @weuiTextColorGray;
-    font-size: 12px;
+    // edward: change font-size from 12px to 13px
+    font-size: 13px;
     line-height: 1.8;
 }
